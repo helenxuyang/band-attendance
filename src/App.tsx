@@ -1,10 +1,14 @@
 import './App.css'
-import { GeolocationChecker } from './GeolocationChecker'
+import { DateTimeChecker } from './DateTimeChecker'
+import { LocationChecker } from './LocationChecker'
 
 function App() {
 
   return (
-    <GeolocationChecker />
+    <>
+      <LocationChecker />
+      <DateTimeChecker />
+    </>
   )
 }
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BoundedCoords, hardingBandBuildingCoords, testCoords } from "./locationData";
+import { BoundedCoords, hardingBandBuildingCoords, testCoords } from "./data";
 
 const isPositionInBoundary = (currentPosition: GeolocationPosition, boundary: BoundedCoords) => {
   const { latitude, longitude } = currentPosition.coords;
@@ -13,7 +13,7 @@ const isPositionInBoundary = (currentPosition: GeolocationPosition, boundary: Bo
   return false;
 }
 
-export const GeolocationChecker = () => {
+export const LocationChecker = () => {
 
   const [location, setLocation] = useState<GeolocationPosition | null>(null);
   const geolocation = navigator.geolocation;
